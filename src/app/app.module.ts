@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCommonModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatToolbarModule,
     MatCommonModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

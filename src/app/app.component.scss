@@ -1,3 +1,32 @@
 .spacer {
     flex: 1 1 auto;
 }
+
+.madewith {
+    margin: 5px;
+}
+
+// used text align center to center the container, but i wanted the text aligned left. was gonna reach for flexbox, but margin is cutting it
+.introduction {    
+    // padding: 10%;
+    max-width: 80%; // i guess max width is better than set padding
+    margin: 10% auto;
+}
+
+// so much iteration on my design idek where to start documenting my thought process
+.fancy-title {
+    font-size: xxx-large; // haha VS Code doesn't know this is a thing
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.subtitle {
+    text-align: right;
+}
+
+.fancy-subtitle {
+    font-size: xx-large;
+    // font-stretch: extra-expanded !important;  // maybe material font is overriding this. even the important flag didn't do anything though
+    letter-spacing: 6.9px; // aaah the computed styles tab revealed this property
+    margin: 10px;
+}

@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use '@angular/material' as mat;
+@include mat.core();
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$my-primary: mat.define-palette(mat.$brown-palette, 700);
+$my-accent: mat.define-palette(mat.$amber-palette, 200);
+
+$my-theme: mat.define-dark-theme((
+    color: (
+        primary: $my-primary,
+        accent: $my-accent,
+    )
+));
+
+// let's try to create a custom theme... having trouble overriding the default pink-bluegrey one i added even though i removed it from angular.json
+
+// @include mat.core-theme($my-theme);
+// @include mat.all-component-themes($my-theme); // ah this was the key but it generates unnescessary css...
