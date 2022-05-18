@@ -4,7 +4,7 @@
 @include mat.core();
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: black; color: white;}
 
 $my-primary: mat.define-palette(mat.$brown-palette, 700);
 $my-accent: mat.define-palette(mat.$amber-palette, 200);
