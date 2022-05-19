@@ -7,12 +7,11 @@ mat-icon {
 }
 
 canvas {
-    border: 1px dashed grey;
-    // i had sizing issues until i put the canvas above the toolbar in the html
-    // width: 100%;
-    // height: 100%; 
+    // 
+    // border: 1px dashed grey;
+    // i had sizing issues until i put the canvas above the toolbar in the html... and stopped using css height and width which just stretched the canvas lol
     position: absolute;
-    z-index: -1; // TODO: make sure this tucks it under the toolbar
+    z-index: -1;
 }
 
 // used text align center to center the container, but i wanted the text aligned left. was gonna reach for flexbox, but margin is cutting it
