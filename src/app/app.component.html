@@ -1,4 +1,6 @@
-<canvas #canvas [height]="canvasHeight" [width]="canvasWidth"></canvas>
+<!-- <canvas #canvas [height]="canvasHeight" [width]="canvasWidth"></canvas> -->
+<ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"
+              (particlesLoaded)="particlesLoaded($event)"></ng-particles>
 
 <mat-toolbar color="primary">
   <span>epic portfolio!</span>
