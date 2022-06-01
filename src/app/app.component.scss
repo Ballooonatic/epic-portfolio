@@ -38,3 +38,11 @@ canvas {
     letter-spacing: 6.9px; // aaah the computed styles tab revealed this property
     margin: 10px;
 }
+
+// how to get ng-particles not covering my stuff. z index doesn't cut it. 
+// no display or position properties help. computed styling doesn't reveal
+// any ideas...
+
+// tried styling the canvas inside of the ng-particles element, but it
+// doesn't seem to apply my styling, prob bc it's rendered afterwards?
+// aha, it has a built in thing i can apply to particles options.

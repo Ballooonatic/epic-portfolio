@@ -2,6 +2,10 @@ import { MoveDirection, ClickMode, HoverMode, OutMode, CollisionMode, RotateDire
 
 export const particlesOptions = {
     fpsLimit: 60,
+    fullScreen: {
+        enable: true,
+        zIndex: -1
+    },
     interactivity: {
         events: {
             onClick: {
