@@ -10,7 +10,7 @@ export const particlesOptions = {
         events: {
             onClick: {
                 enable: true,
-                mode: ClickMode.repulse
+                mode: ClickMode.repulse,
             },
             onHover: {
                 parallax: {

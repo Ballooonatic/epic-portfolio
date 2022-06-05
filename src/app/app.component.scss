@@ -7,7 +7,6 @@ mat-icon {
 }
 
 canvas {
-    // 
     // border: 1px dashed grey;
     // i had sizing issues until i put the canvas above the toolbar in the html... and stopped using css height and width which just stretched the canvas lol
     position: absolute;
@@ -32,11 +31,12 @@ canvas {
     text-align: right;
 }
 
-.fancy-subtitle {
+.fancy-subtitle-letter {
     font-size: xx-large;
     // font-stretch: extra-expanded !important;  // maybe material font is overriding this. even the important flag didn't do anything though
-    letter-spacing: 6.9px; // aaah the computed styles tab revealed this property
-    margin: 10px;
+    // letter-spacing: 6.9px; // aaah the computed styles tab revealed this property
+    margin: 5px;
+    display: inline-block;
 }
 
 // how to get ng-particles not covering my stuff. z index doesn't cut it. 
