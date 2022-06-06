@@ -136,6 +136,14 @@
               "devServerTarget": "epic-portfolio:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/epic-portfolio",
+            "netlifyToken": "ZSM14gczSsM9VCSLpVmKks-v5WFIcWtZ47i_6fP8B-w",
+            "siteId": "6c512c20-d7a8-4612-9597-d9f02f3520a9"
+          }
         }
       }
     }

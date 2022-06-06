@@ -33,11 +33,12 @@ export class AppComponent implements AfterViewInit {
       duration: 5000,
       delay: 1500,
       color: () => {
-        return `hsl(${this.titleColor += 24},${anime.random(60, 61)}%,${anime.random(50, 51)}%)`;
+        if (Math.random() < 0.5) {
+          return `hsl(${this.titleColor += 24},${anime.random(60, 61)}%,${anime.random(50, 51)}%)`;
+        } else {
+          return `hsl(${anime.random(0, 360)},${anime.random(20, 80)}%,${anime.random(30, 90)}%)`;
+        }
       },
-      // color: function () {
-      //   return `hsl(${anime.random(0, 360)},${anime.random(20, 80)}%,${anime.random(30, 90)}%)`;
-      // },
     })
 
     anime({
