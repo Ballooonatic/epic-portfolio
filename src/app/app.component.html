@@ -2,35 +2,19 @@
               (particlesLoaded)="particlesLoaded($event)"></ng-particles> -->
 
 <mat-toolbar color="primary">
-  <span>epic portfolio!</span>
+  <span class="header">epic portfolio!</span>
   <span class="spacer"></span>
   <span>made with</span>
-  <mat-icon>favorite_border</mat-icon>
+  <mat-icon class="heart">favorite_border</mat-icon>
 </mat-toolbar>
 
 <div class="introduction">
-  <h1 class="title">Hi 👋🏻 my name's <span class="fancy-title">MICHAEL IMGRUND</span></h1>
+  <h1 class="title">Hi 👋🏻 my name's 
+    <span class="fancy-title" *ngFor="let letter of michaelImgrund">{{letter}}</span>
+  </h1>
   <h3 class="subtitle">
     and I create 
-    <span class="fancy-subtitle-letter">d</span>
-    <span class="fancy-subtitle-letter">i</span>
-    <span class="fancy-subtitle-letter">g</span>
-    <span class="fancy-subtitle-letter">i</span>
-    <span class="fancy-subtitle-letter">t</span>
-    <span class="fancy-subtitle-letter">a</span>
-    <span class="fancy-subtitle-letter">l</span>
-    <span class="fancy-subtitle-letter"> </span> <!-- lol idk about this -->
-    <span class="fancy-subtitle-letter">e</span>
-    <span class="fancy-subtitle-letter">x</span>
-    <span class="fancy-subtitle-letter">p</span>
-    <span class="fancy-subtitle-letter">e</span>
-    <span class="fancy-subtitle-letter">r</span>
-    <span class="fancy-subtitle-letter">i</span>
-    <span class="fancy-subtitle-letter">e</span>
-    <span class="fancy-subtitle-letter">n</span>
-    <span class="fancy-subtitle-letter">c</span>
-    <span class="fancy-subtitle-letter">e</span>
-    <span class="fancy-subtitle-letter">s</span>
+    <span class="fancy-subtitle-letter" *ngFor="let letter of digitalExperiences">{{letter}}</span>
     <!-- 
       Trying to figure out how to animate each letter. Not sure if anime has a bug or what. docs and google
       don't shed too much light on how their selection works. document.querySelectorAll doesn't cut it,
