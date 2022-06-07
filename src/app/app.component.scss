@@ -15,9 +15,12 @@ canvas { // TODO: prob can delete this.
 
 // used text align center to center the container, but i wanted the text aligned left. was gonna reach for flexbox, but margin is cutting it
 .introduction {    
-    // padding: 10%;
-    max-width: 80%; // i guess max width is better than set padding
+    padding: 30px;
+    max-width: 80%;
     margin: 10% auto;
+    background-color: hsla(0, 0, 15, 0.85);
+    height: 500px;
+    border-radius: 20px;
 }
 
 // so much iteration on my design idek where to start documenting my thought process

@@ -95,7 +95,7 @@ export const particlesOptions = {
             warp: true,
         },
         number: {
-            value: 150,
+            value: 100,
             max: 200, // ???
             limit: 300
         },
