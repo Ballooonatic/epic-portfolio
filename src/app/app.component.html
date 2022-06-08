@@ -9,9 +9,12 @@
 </mat-toolbar>
 
 <div class="introduction">
-  <h1 class="title">Hi 👋🏻 my name's 
-    <span class="fancy-title" *ngFor="let letter of michaelImgrund">{{letter}}</span>
-  </h1>
+  <div class="title">
+    <h1>Hi 👋🏻 my name's</h1>
+    <span class="fancy-title mat-display-4" *ngFor="let letter of michael">{{letter}}</span>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <!-- maybe a better way -->
+    <span class="fancy-title mat-display-4" *ngFor="let letter of imgrund">{{letter}}</span>
+  </div>
   <h3 class="subtitle">
     and I create 
     <span class="fancy-subtitle-letter" *ngFor="let letter of digitalExperiences">{{letter}}</span>
@@ -36,6 +39,9 @@
 </div>
 
 <h2 style="text-align: center;">it's a work in progress... stay tuned for more :D</h2>
+<!-- to do :D -->
+
+<!-- decrease bundle size -->
 <!-- and a comment section -->
 <!-- resume DL, work exp, contact info,  -->
 

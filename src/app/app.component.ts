@@ -14,7 +14,8 @@ export class AppComponent implements AfterViewInit {
 
   id = "tsparticles";
   particlesOptions = particlesOptions;
-  michaelImgrund = 'MICHAEL IMGRUND'.split('')
+  michael = 'MICHAEL'.split('')
+  imgrund = 'IMGRUND'.split('')
   digitalExperiences = 'digital experiences'.split('')
   titleColor = -24;
 
@@ -24,8 +25,8 @@ export class AppComponent implements AfterViewInit {
       targets: '.fancy-title',
       translateY: [1, 0],
       delay: anime.stagger(150),
-      rotate: function () { return anime.random( -2, 2 )},
-      easing: 'spring(10, 100, 0, 30)',
+      rotate: function () { return anime.random( -1, 1 )},
+      easing: 'spring(10, 100, 0, 50)',
     })
 
     anime({
@@ -71,7 +72,7 @@ export class AppComponent implements AfterViewInit {
       // easing: 'spring(1, 100, 5, 0)',
       duration: 3000,
       direction: 'alternate',
-      loop: true,
+      // loop: true,
       delay: anime.stagger(100, {
         start: 1500,
         grid: [5, 10], // no idea how this works now lmao

@@ -6,36 +6,29 @@ mat-icon {
     margin-left: 5px;
 }
 
-canvas { // TODO: prob can delete this.
-    // border: 1px dashed grey;
-    // i had sizing issues until i put the canvas above the toolbar in the html... and stopped using css height and width which just stretched the canvas lol
-    position: absolute;
-    z-index: -1;
-}
-
 // used text align center to center the container, but i wanted the text aligned left. was gonna reach for flexbox, but margin is cutting it
 .introduction {    
-    padding: 30px;
-    max-width: 80%;
+    // padding: 30px;
+    // max-width: 80%;
     margin: 10% auto;
-    background-color: hsla(0, 0, 15, 0.85);
+    // background-color: hsla(0, 0, 15, 0.85);
     height: 500px;
     border-radius: 20px;
+    text-align: center;
 }
 
 // so much iteration on my design idek where to start documenting my thought process
 .fancy-title {
-    font-size: xxx-large; // haha VS Code doesn't know this is a thing
-    font-weight: bolder;
     display: inline-block;
-    // margin: 5px;
+    font-family: 'Meshroom';
 }
 
-.subtitle {
-    text-align: right;
-}
+// .subtitle {
+//     text-align: right;
+// }
 
 .fancy-subtitle-letter {
+    font-weight: 900;
     font-size: xx-large;
     margin: 5px;
     display: inline-block;

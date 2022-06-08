@@ -95,9 +95,9 @@ export const particlesOptions = {
             warp: true,
         },
         number: {
-            value: 100,
+            value: 25,
             max: 200, // ???
-            limit: 300
+            limit: 200
         },
         opacity: { value: 1 },
         shape: {
@@ -113,7 +113,7 @@ export const particlesOptions = {
             options: {
                 star: {
                     sides: 4,
-                    inset: 2,
+                    inset: 3,
                 },
                 character: {
                     value: "+", 
@@ -126,13 +126,13 @@ export const particlesOptions = {
             }
         },
         size: {
-            value: { min: 1, max: 3 },
+            value: { min: 1, max: 3},
         },
         rotate:		{
             value: 100,
             animation: {
                 enable: true,
-                speed: 100,
+                speed: 50,
                 sync: false
             },
             direction:	RotateDirection.random,
