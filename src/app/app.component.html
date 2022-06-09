@@ -8,37 +8,50 @@
   <mat-icon class="heart">favorite_border</mat-icon>
 </mat-toolbar>
 
+
+
 <div class="introduction">
+
   <div class="title">
     <h1>Hi 👋🏻 my name's</h1>
-    <span class="fancy-title mat-display-4" *ngFor="let letter of michael">{{letter}}</span>
+    <div class="name-wrapper">
+      <span class="fancy-title" *ngFor="let letter of michael">{{letter}}</span>
+    </div>
     <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <!-- maybe a better way -->
-    <span class="fancy-title mat-display-4" *ngFor="let letter of imgrund">{{letter}}</span>
+    <div class="name-wrapper">
+      <span class="fancy-title" *ngFor="let letter of imgrund">{{letter}}</span>
+    </div>
   </div>
-  <h3 class="subtitle">
-    and I create 
+
+  <div class="subtitle">
+    <h3>and I create</h3>
     <span class="fancy-subtitle-letter" *ngFor="let letter of digitalExperiences">{{letter}}</span>
-    <!-- 
-      Trying to figure out how to animate each letter. Not sure if anime has a bug or what. docs and google
-      don't shed too much light on how their selection works. document.querySelectorAll doesn't cut it,
-      I should prob know why it doesn't jive with Angular bc Angular has their way of accessing DOM Elements
-      but I don't know exactly why lol. Looking into ViewChild(ren) aaand i'm not sure where to start. Could I 
-      grab them all with ViewChildren? Or put ViewChild on a parent element and try to loop through the children?
+  </div>
 
-      ViewChildren gives you an array of ElementRefs which i think anime can't target. 
-      ViewChild returns the ElementRef of the subtitle which has a 'childNodes' property, however it turns up
-      undefined when i try to use it bc of some internal thing going on i don't understand bc of course. how can 
-      you console.log the thing and it's undefined when you try to use it? gaaaah
-
-      omg what a pain. I noticed it was animating my h3 but not the span. i thought it had to do with nesting but
-      i tried different tags in case it didn't like span. <p> worked. then i made it display inline because i
-      didn't want vertical text. it stopped working. so animejs requires display block elements to animate. 
-      thank frick i found this.
-    -->
-  </h3>
 </div>
 
-<h2 style="text-align: center;">it's a work in progress... stay tuned for more :D</h2>
+
+
+<h3 class="wip">it's a work in progress... stay tuned for more :D</h3>
+
+<!-- 
+  Trying to figure out how to animate each letter. Not sure if anime has a bug or what. docs and google
+  don't shed too much light on how their selection works. document.querySelectorAll doesn't cut it,
+  I should prob know why it doesn't jive with Angular bc Angular has their way of accessing DOM Elements
+  but I don't know exactly why lol. Looking into ViewChild(ren) aaand i'm not sure where to start. Could I 
+  grab them all with ViewChildren? Or put ViewChild on a parent element and try to loop through the children?
+
+  ViewChildren gives you an array of ElementRefs which i think anime can't target. 
+  ViewChild returns the ElementRef of the subtitle which has a 'childNodes' property, however it turns up
+  undefined when i try to use it bc of some internal thing going on i don't understand bc of course. how can 
+  you console.log the thing and it's undefined when you try to use it? gaaaah
+
+  omg what a pain. I noticed it was animating my h3 but not the span. i thought it had to do with nesting but
+  i tried different tags in case it didn't like span. <p> worked. then i made it display inline because i
+  didn't want vertical text. it stopped working. so animejs requires display block elements to animate. 
+  thank frick i found this.
+-->
+
 <!-- to do :D -->
 
 <!-- decrease bundle size -->

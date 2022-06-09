@@ -10,28 +10,88 @@ mat-icon {
 .introduction {    
     // padding: 30px;
     // max-width: 80%;
-    margin: 10% auto;
+    // margin: 10% auto;
     // background-color: hsla(0, 0, 15, 0.85);
     height: 500px;
     border-radius: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-wrapper {
+    display: inline-block; // ok good this lets the names wrap properly
+}
+
+.title h1 {
+    font-size: 5vw;
+}
+
+.title {
+    margin: 100px auto;
 }
 
 // so much iteration on my design idek where to start documenting my thought process
 .fancy-title {
     display: inline-block;
     font-family: 'Meshroom';
+    font-size: 15vw;
 }
 
-// .subtitle {
-//     text-align: right;
-// }
+.subtitle h3 {
+    font-size: 4vw;
+}
 
 .fancy-subtitle-letter {
     font-weight: 900;
-    font-size: xx-large;
-    margin: 5px;
+    font-size: 6vw;
+    margin: 3px;
     display: inline-block;
+}
+
+.wip {
+    position: absolute;
+    bottom: 20px;
+    // margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0; // wow
+}
+
+@media screen and (min-width: 700px) {
+    .title h1{
+        font-size: 3vw;
+    }
+    .fancy-title {
+        font-size: 9vw;
+    }
+    .subtitle h3 {
+        font-size: 2vw;
+    }
+    .fancy-subtitle-letter {
+        font-weight: 900;
+        font-size: 4vw;
+        margin: 5px;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .title h1{
+        font-size: 2vw;
+    }
+    .fancy-title {
+        font-size: 7vw;
+    }
+    .subtitle h3 {
+        font-size: 1vw;
+    }
+    .fancy-subtitle-letter {
+        font-weight: 900;
+        font-size: 2vw;
+        margin: 5px;
+        display: inline-block;
+    }
 }
 
 // how to get ng-particles not covering my stuff. z index doesn't cut it. 
