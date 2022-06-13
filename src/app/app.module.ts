@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCommonModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatCardModule } from '@angular/material/card'
+
 import { NgParticlesModule } from 'ng-particles';
 
 
@@ -26,6 +28,7 @@ import { NgParticlesModule } from 'ng-particles';
     MatButtonModule,
     MatChipsModule,
     NgParticlesModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

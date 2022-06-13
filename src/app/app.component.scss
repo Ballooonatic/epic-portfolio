@@ -58,7 +58,13 @@ mat-icon {
     right: 0; // wow
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .experience .card {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1250px) {
     .title h1{
         font-size: 3vw;
     }
@@ -73,6 +79,9 @@ mat-icon {
         font-size: 4vw;
         margin: 5px;
         display: inline-block;
+    }
+    .experience .card {
+        width: 20%;
     }
 }
 
@@ -92,6 +101,55 @@ mat-icon {
         margin: 5px;
         display: inline-block;
     }
+}
+
+.card {
+    background-color: hsla(0, 0%, 50%, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.experience {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.experience .card {
+    // width: 60%;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.about-me {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.about-me img {
+    width: 100%;
+}
+
+.header-image {
+    background-size: cover;
+}
+
+.biteline {
+    border-radius: 0;
+    background-image: url('../assets/biteline-icon.webp');
+}
+
+.cbc {
+    background-image: url('../assets/cbc-logo');
+}
+
+.material-symbols-outlined {
+    font-size: 40px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
 // how to get ng-particles not covering my stuff. z index doesn't cut it. 
