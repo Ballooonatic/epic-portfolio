@@ -96,6 +96,6 @@ export class AppComponent implements AfterViewInit {
 
   async particlesInit(engine: Engine): Promise<void> {
     console.log(engine);
-    await loadFull(engine);
+    // await loadFull(engine);
   }
 }
