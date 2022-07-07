@@ -90,10 +90,8 @@ export class AppComponent implements AfterViewInit {
         translateX: anime.stagger([-150, -100]), // oh man. depending on how you order these transforms, they affect each other
         scale: function () { return anime.random(1, 2) },
         easing: 'easeInOutElastic(2, .4)',
-        // easing: 'spring(1, 100, 5, 0)',
         duration: 3000,
         direction: 'alternate',
-        // loop: true,
         delay: anime.stagger(100, {
           start: 2000,
           grid: [5, 10], // no idea how this works now lmao
