@@ -5,6 +5,8 @@ import { loadFull } from "tsparticles";
 import { particlesOptions } from './particles-options';
 import { faGithub, faInstagram, faLinkedin, faDiscord, faAngular, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
 import { Platform } from '@angular/cdk/platform';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,10 @@ import { Platform } from '@angular/cdk/platform';
 
 export class AppComponent implements AfterViewInit {
 
-  constructor(public platform: Platform) {}
+  constructor(
+    public platform: Platform,
+    public snackbar: MatSnackBar
+  ) {}
 
   id = "tsparticles";
   particlesOptions = particlesOptions;
@@ -29,8 +34,10 @@ export class AppComponent implements AfterViewInit {
   faDsc = faDiscord
   faSoundcloud = faSoundcloud
   faAngular = faAngular
+  faEnvelope = faEnvelope
 
   isMobile = this.platform.ANDROID || this.platform.IOS
+  isCopied = false;
 
   ngAfterViewInit() {
 

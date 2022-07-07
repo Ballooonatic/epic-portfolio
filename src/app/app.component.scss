@@ -24,12 +24,11 @@
     display: inline-block; // ok good this lets the names wrap properly
 }
 
-.title h1 {
-    font-size: 5vw;
-}
-
 .title {
     margin: 100px auto;
+    h1 {
+        font-size: 5vw;
+    }
 }
 
 // so much iteration on my design idek where to start documenting my thought process
@@ -39,9 +38,12 @@
     font-size: 15vw;
 }
 
-.subtitle h3 {
-    font-size: 4vw;
-}
+.subtitle {
+    margin: 0 auto;
+    h3 {
+        font-size: 4vw;
+    }
+} 
 
 .fancy-subtitle-letter {
     font-weight: 900;
@@ -120,6 +122,17 @@
 
 .text-center {
     text-align: center;
+}
+
+.dsc-tag {
+    color: #7289da;
+    &:hover {
+        color: #94abfc;
+        // color: #839aeb;
+        // color: #6178c9;
+        // color: #5067b8;
+        cursor: pointer;
+    }
 }
 
 // how to get ng-particles not covering my stuff. z index doesn't cut it. 
