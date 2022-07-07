@@ -23,9 +23,9 @@
   <a mat-icon-button href="https://www.soundcloud.com/so_co_tra" target="_blank">
     <fa-icon [icon]="faSoundcloud" size="lg"></fa-icon>
   </a>
-  <button mat-icon-button (click)="snackbar.open('email copied!', '', { duration: 1500 })" matTooltip="copy email?" cdkCopyToClipboard="michael.imgrund@gmail.com">
+  <a mat-icon-button href="mailto:michael.imgrund@gmail.com">
     <fa-icon [icon]="faEnvelope" size="lg"></fa-icon>
-  </button>
+  </a>
 
   <a mat-raised-button color="primary" style="margin-left: 10px" href="assets/resume.pdf" target="_blank">
     Resume
@@ -98,7 +98,16 @@
       </mat-card-header>
       <img mat-card-image src="assets/portrait.jpeg" alt="photo of me">
       <mat-card-content>
-        <p>Hey! I'm a self-taught TS dev who specializes in Angular and Node. My career began with networking in the Charlotte NC area and contributing to projects, and a friend was able to throw an opportunity my way. I spent the next couple years at a startup, Biteline, moved on to a CBC subsidiary, and am now looking for my next opportunity and honing my skills. I love exploring dev content through articles and videos and always enjoy learning new things, especially if I have a reason to apply it. I also have a huge passion for making music, and Super Smash Bros. Ultimate for the Nintendo Switch. If you ever want to challenge me, my discord tag is <span class="dsc-tag" (click)="snackbar.open('copied!', '', { duration: 1500 })" matTooltip="copy?" cdkCopyToClipboard="balloonatic#8179">balloonatic#8179</span>! I'm always up for a fight.</p>
+        <p>
+          Hey! I'm a self-taught TS dev who specializes in Angular and Node. My career began with networking in the Charlotte NC area 
+          and contributing to projects, and a friend was able to throw an opportunity my way. I spent the next couple years at a startup, Biteline, 
+          moved on to a CBC subsidiary, and am now looking for my next opportunity and honing my skills. I love exploring dev content through 
+          articles and videos and always enjoy learning new things, especially if I have a reason to apply it. I also have a huge passion for 
+          making music, and Super Smash Bros. Ultimate for the Nintendo Switch. If you ever want to challenge me, my discord tag is 
+          <span class="dsc-tag" (click)="snackbar.open('copied!', '', { duration: 1500 })"
+            matTooltip="copy?" cdkCopyToClipboard="balloonatic#8179">balloonatic#8179</span>!
+          I'm always up for a fight.
+        </p>
       </mat-card-content>
       <!-- couldn't get around clicking making the tooltip disappear so i gotta use a toast :( i was getting all fancy using events to change the text to "copied!" as well. oh well. -->
     </mat-card>
