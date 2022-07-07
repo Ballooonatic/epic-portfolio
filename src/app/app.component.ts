@@ -3,6 +3,8 @@ import anime from 'animejs/lib/anime.es.js';
 import { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { particlesOptions } from './particles-options';
+import { faGithub, faInstagram, faLinkedin, faDiscord, faAngular, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
+import { Platform } from '@angular/cdk/platform';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +14,23 @@ import { particlesOptions } from './particles-options';
 
 export class AppComponent implements AfterViewInit {
 
+  constructor(public platform: Platform) {}
+
   id = "tsparticles";
   particlesOptions = particlesOptions;
   michael = 'MICHAEL'.split('')
   imgrund = 'IMGRUND'.split('')
   digitalExperiences = 'digital experiences'.split('')
   titleColor = -24;
+
+  faInsta = faInstagram
+  faLinkedin = faLinkedin  
+  faGithub = faGithub
+  faDsc = faDiscord
+  faSoundcloud = faSoundcloud
+  faAngular = faAngular
+
+  isMobile = this.platform.ANDROID || this.platform.IOS
 
   ngAfterViewInit() {
 
@@ -57,28 +70,30 @@ export class AppComponent implements AfterViewInit {
       endDelay: function () { return anime.random( 0, 500 )}, // need end delay bc reverse lol
       direction: 'reverse'
     });
-    
-    anime({
-      targets: '.fancy-subtitle-letter',
-      color: function () {
-        return `hsl(${anime.random(0, 360)},${anime.random(20, 80)}%,${anime.random(30, 70)}%)`;
-      },
-      translateY: 200,
-      rotate: anime.stagger([-360, 360]),
-      skew: anime.stagger([-60, 60]),
-      translateX: anime.stagger([-150, -100]), // oh man. depending on how you order these transforms, they affect each other
-      scale: function () { return anime.random(1, 2) },
-      easing: 'easeInOutElastic(2, .4)',
-      // easing: 'spring(1, 100, 5, 0)',
-      duration: 3000,
-      direction: 'alternate',
-      // loop: true,
-      delay: anime.stagger(100, {
-        start: 2000,
-        grid: [5, 10], // no idea how this works now lmao
-      }),
-    });
 
+    if (!this.isMobile) {
+      anime({
+        targets: '.fancy-subtitle-letter',
+        color: function () {
+          return `hsl(${anime.random(0, 360)},${anime.random(20, 80)}%,${anime.random(30, 70)}%)`;
+        },
+        translateY: 200,
+        rotate: anime.stagger([-360, 360]),
+        skew: anime.stagger([-60, 60]),
+        translateX: anime.stagger([-150, -100]), // oh man. depending on how you order these transforms, they affect each other
+        scale: function () { return anime.random(1, 2) },
+        easing: 'easeInOutElastic(2, .4)',
+        // easing: 'spring(1, 100, 5, 0)',
+        duration: 3000,
+        direction: 'alternate',
+        // loop: true,
+        delay: anime.stagger(100, {
+          start: 2000,
+          grid: [5, 10], // no idea how this works now lmao
+        }),
+      });
+    }
+    
     anime({
       targets: '.heart',
       rotateY: 360,
@@ -95,7 +110,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   async particlesInit(engine: Engine): Promise<void> {
-    console.log(engine);
-    // await loadFull(engine);
+    console.log(engine);  
+    await loadFull(engine);
   }
 }

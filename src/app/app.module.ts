@@ -12,6 +12,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card'
 
 import { NgParticlesModule } from 'ng-particles';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { NgParticlesModule } from 'ng-particles';
     MatChipsModule,
     NgParticlesModule,
     MatCardModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
